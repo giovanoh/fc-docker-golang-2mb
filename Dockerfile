@@ -8,7 +8,7 @@ COPY main.go .
 
 RUN go mod init fc-docker-golang-2mb
 
-RUN go build -o fc-rocks
+RUN go build -ldflags "-w -s" -o fc-rocks
 
 # Fase final
 
